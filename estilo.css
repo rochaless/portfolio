@@ -8,6 +8,8 @@
     src: url(font/Montserrat-VariableFont_wght.ttf);
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: #FAF1E4;
+    background: #FAF1E4;
 }
 
 .apresentacao {
@@ -24,18 +26,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 1em;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     text-align: justify;
     display: flex;
     flex-direction: column;
     gap: 40px;
     font-weight: 400;
     line-height: 36px;
-    padding-right: 150px;
-    margin-right: 55px;
 }
 
 .titulo-destaque {
@@ -54,7 +56,7 @@ body {
     font-family: Krona;
     font-weight: 400;
     line-height: 40px;
-    font-size: 17px;
+    font-size: 1.1em;
 }
 
 .apresentacao__link__botao {
@@ -63,7 +65,7 @@ body {
     gap: 16px;
     color: black;
     font-weight: 600;
-    width: 378px;
+    width: 70%;
     border: 2px solid #9EB384;
     text-align: center;
     border-radius: 8px;
@@ -77,16 +79,21 @@ body {
     height: 32px;
 }
 
+.apresentacao_img {
+    width: 50%;
+}
+
+
 main {
     font-family: Montserrat;
     color: AC7D88;
-    font-size: 17px;
+    font-size: 1.25em;
 }
 
 main h1 {
     font-family: Krona;
     text-align: left;
-    font-size: 29px;
+    font-size: 1.7em;
     font-weight: 400;
     line-height: 56px;
 }
@@ -98,38 +105,21 @@ main img {
     border: 4px solid #9EB384;
 }
 
-.simbolo1, .simbolo2 {
-    color: #435334;
-    font-size: 200px;
-    font-weight: 800;
-}
-
-.simbolo1 {
-    display: flex;
-    justify-content: left;
-}
-
-.simbolo2 {
-    display: flex;
-    justify-content:right;
-}
-
 /*-----------------------------*/
 
 .header__menu {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 80px;
     list-style: none;
-    padding-left: 360px;
-    padding-top: 65px;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding: 2% 0% 0% 0%;;
 }
 
 .header__menu a {
     font-family: Montserrat;
     color: #435334;
-    font-size: 17px;
+    font-size: 1.25em;
     font-weight: 600;
     line-height: 30px;
     text-decoration: none;
@@ -141,8 +131,29 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: Montserrat;
-    font-size: 8px;
+    font-size: 0.8em;
     font-weight: 400;
     height: 80px;
     background-color: #9EB384;
+    margin-top: 12%;
+}
+
+@media (max-width: 1300px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .apresentacao_img {
+        width: auto;
+    }
+
+    .apresentacao__conteudo{ 
+        width: auto;
+    }
+
+    .header__menu {
+        padding: 6%;
+    }
 }
